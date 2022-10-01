@@ -11,7 +11,7 @@ export default function OurPartners({ mode }) {
       style={{ backgroundImage: '../assets/bike1.jpeg' }}
     >
       <h1 className="text-success py-5">Our Partners</h1>
-      <div className="container">
+      <div className="container" data-aos="fade-up">
         <div className="row gy-4 align-items-center features-item">
           <div className="col-md-3">
             <img src={img1} className="img-fluid rounded" alt="" width="90" />

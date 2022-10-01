@@ -9,7 +9,7 @@ export default function Features({ mode }) {
     >
       <h1 className="text-success p-5">Features</h1>
 
-      <div className="container" data-aos="fade-up">
+      <div className="container" data-aos="fade-up" data-aos-delay="600">
         <div className="row align-items-center gy-4 mt-4">
           <div className="col-lg-4 d-flex flex-column align-items-end gap-2">
             <div className="d-flex ">

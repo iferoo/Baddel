@@ -13,7 +13,7 @@ export default function HowItWork({ mode }) {
       <h1 className="m-5 text-success ">How It Work</h1>
 
       <div className={`container ${mode ? 'text-dark' : 'text-light'}`}>
-        <div className="row gy-4 align-items-center features-item">
+        <div data-aos="fade-right" data-aos-delay="600" className="row gy-4 align-items-center features-item mb-5">
           <div className="col-md-4">
             <img src={img1} className="img-fluid rounded" alt="" />
           </div>
@@ -22,7 +22,7 @@ export default function HowItWork({ mode }) {
           </div>
         </div>
 
-        <div className="row gy-4 align-items-center features-item">
+        <div data-aos="fade-up" data-aos-delay="500" className="row gy-4 align-items-center features-item mb-5">
           <div className="col-md-4 order-1 order-md-2">
             <img src={img2} className="img-fluid rounded" alt="" />
           </div>
@@ -31,7 +31,7 @@ export default function HowItWork({ mode }) {
           </div>
         </div>
 
-        <div className="row gy-4 align-items-center features-item">
+        <div data-aos="fade-right" data-aos-delay="500" className="row gy-4 align-items-center features-item mb-5">
           <div className="col-md-4">
             <img src={img3} className="img-fluid rounded" alt="" />
           </div>
@@ -40,7 +40,7 @@ export default function HowItWork({ mode }) {
           </div>
         </div>
 
-        <div className="row gy-4 align-items-center features-item">
+        <div data-aos="fade-up" data-aos-delay="500" className="row gy-4 align-items-center features-item mb-5">
           <div className="col-md-4 order-1 order-md-2">
             <img src={img4} className="img-fluid rounded" alt="" />
           </div>

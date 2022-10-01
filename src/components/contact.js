@@ -7,7 +7,7 @@ export default function Contact({ mode }) {
       className={`contact p-5 text-center ${mode ? '' : 'bg-dark'}`}
     >
       <h1 className="text-success p-5">Contact us</h1>
-      <div className="container" data-aos="fade-up">
+      <div className="container" data-aos="fade-up" data-aos-delay="600">
         <div>
           <iframe
             className="w-100"
