@@ -2,15 +2,15 @@ import React from 'react';
 import logo from '../assets/baddel-logo.png';
 import './navbar.css';
 
-export default function navbar() {
+export default function navbar({ mode, modeHandle }) {
   return (
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">
+    <nav className={`navbar navbar-expand-lg ${mode ? 'bg-light' : 'bg-dark'}`}>
+      <div className="container">
+        <a className="navbar-brand" href="#">
           <img src={logo} alt="Baddel" width="150" height="50" />
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -18,36 +18,54 @@ export default function navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link active-link" aria-current="page" href="#">
                 Home
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#howitwork">
+            <li className="nav-item">
+              <a
+                className={`nav-link ${mode ? 'text-dark' : 'text-light'}`}
+                href="#howitwork"
+              >
                 How it Work
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a
+                className={`nav-link ${mode ? 'text-dark' : 'text-light'}`}
+                href="#"
+              >
                 Features
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a
+                className={`nav-link ${mode ? 'text-dark' : 'text-light'}`}
+                href="#"
+              >
                 Contact
               </a>
             </li>
+            <li className="nav-item" onClick={modeHandle}>
+              <div className="nav-link ">
+                {mode ? (
+                  <i className="bi bi-moon-fill text-dark border rounded p-1"></i>
+                ) : (
+                  <i className="bi bi-sun-fill text-light border rounded p-1"></i>
+                )}
+              </div>
+            </li>
           </ul>
-          <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit">
+          <div className="d-flex" role="search">
+            <button className="btn btn-success" type="submit">
               Download Now
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </nav>

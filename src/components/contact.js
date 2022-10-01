@@ -1,17 +1,18 @@
 import React from 'react';
 
-export default function Contact() {
+export default function Contact({ mode }) {
   return (
-    <section id="contact" className="contact mb-4 text-center">
-        <h1 className="m-5 text-success">Contact us</h1>
+    <section
+      id="contact"
+      className={`contact p-5 text-center ${mode ? '' : 'bg-dark'}`}
+    >
+      <h1 className="text-success p-5">Contact us</h1>
       <div className="container" data-aos="fade-up">
         <div>
           <iframe
             className="w-100"
             height="300"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-            frameborder="0"
-            allowfullscreen
           ></iframe>
         </div>
 
@@ -22,8 +23,8 @@ export default function Contact() {
                 <i className="bi bi-geo-alt fs-2 text-white align-self-center"></i>
               </div>
               <div>
-                <h4>Location:</h4>
-                <p className="text-muted">
+                <h4 className={`${mode ? '': 'text-light'}`}>Location:</h4>
+                <p className={`${mode ? 'text-muted' : 'text-light'}`}>
                   A108 Adam Street, New York, NY 535022
                 </p>
               </div>
@@ -34,8 +35,8 @@ export default function Contact() {
                 <i className="bi bi-envelope fs-2 text-white align-self-center"></i>
               </div>
               <div>
-                <h4>Email:</h4>
-                <p className="text-muted">info@example.com</p>
+                <h4 className={`${mode ? '': 'text-light'}`}>Email:</h4>
+                <p className={`${mode ? 'text-muted' : 'text-light'}`}>info@example.com</p>
               </div>
             </div>
 
@@ -44,8 +45,8 @@ export default function Contact() {
                 <i className="bi bi-phone flex-shrink-0 fs-2 text-white align-self-center"></i>
               </div>
               <div>
-                <h4>Call:</h4>
-                <p className="text-muted">+1 5589 55488 55</p>
+                <h4 className={`${mode ? '': 'text-light'}`}>Call:</h4>
+                <p className={`${mode ? 'text-muted' : 'text-light'}`}>+1 5589 55488 55</p>
               </div>
             </div>
           </div>
@@ -100,7 +101,7 @@ export default function Contact() {
               </div>
 
               <div className="text-center mt-4">
-                <button type="submit" class="btn btn-success">
+                <button type="submit" className="btn btn-success">
                   Send Message
                 </button>
               </div>
