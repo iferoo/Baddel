@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Contact from './components/contact';
 import Features from './components/features';
@@ -10,20 +10,24 @@ import OurPartners from './components/ourpartners';
 
 function App() {
   const [mode, setMode] = useState(true);
+  
+  const currMode = localStorage.getItem('mode') === 'false' ? false : true;
+
   const modeHandle = () => {
     setMode(!mode);
-    console.log(mode);
+    localStorage.setItem('mode', mode);
   };
+ 
 
   return (
     <div className="App">
-      <Navbar mode={mode} modeHandle={modeHandle} />
-      <Header mode={mode} />
-      <HowItWork mode={mode} />
-      <Features mode={mode} />
-      <Contact mode={mode} />
-      <OurPartners mode={mode} />
-      <Footer mode={mode} />
+      <Navbar mode={currMode} modeHandle={modeHandle} />
+      <Header mode={currMode} />
+      <HowItWork mode={currMode} />
+      <Features mode={currMode} />
+      <Contact mode={currMode} />
+      <OurPartners mode={currMode} />
+      <Footer mode={currMode} />
     </div>
   );
 }
