@@ -1,4 +1,9 @@
 .active-link {
-  color: #198754;
-  
+  color: #198754 !important;
+  font-weight: 500 !important;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 400;
 }

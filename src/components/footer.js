@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import logo from '../assets/baddel-logo.png';
 
 export default function Footer({ mode }) {
@@ -20,52 +22,27 @@ export default function Footer({ mode }) {
               <h5>Useful Links</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
-                  <a
-                    href="/#"
-                    className={`nav-link p-0 ${
-                      mode ? 'text-muted' : 'text-light'
-                    }`}
-                  >
+                  <a href="/#" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
                     Home
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a
-                    href="/#"
-                    className={`nav-link p-0 ${
-                      mode ? 'text-muted' : 'text-light'
-                    }`}
-                  >
+                  <a href="/#" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
                     Features
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a
-                    href="/#"
-                    className={`nav-link p-0 ${
-                      mode ? 'text-muted' : 'text-light'
-                    }`}
-                  >
+                  <a href="/#" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
                     Pricing
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a
-                    href="/#"
-                    className={`nav-link p-0 ${
-                      mode ? 'text-muted' : 'text-light'
-                    }`}
-                  >
+                  <a href="/#" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
                     FAQs
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a
-                    href="/#"
-                    className={`nav-link p-0 ${
-                      mode ? 'text-muted' : 'text-light'
-                    }`}
-                  >
+                  <a href="/#" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
                     About
                   </a>
                 </li>
@@ -79,8 +56,7 @@ export default function Footer({ mode }) {
                 <br />
                 United States <br />
                 <br />
-                <strong className="text-success">Phone: </strong> +1 5589 55488
-                55
+                <strong className="text-success">Phone: </strong> +1 5589 55488 55
                 <br />
                 <strong className="text-success">Email: </strong>
                 info@example.com
@@ -108,8 +84,7 @@ export default function Footer({ mode }) {
 
           <div className="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top text-center">
             <p>
-              &copy; Copyright <span className="text-success">Baddel</span>. All
-              Rights Reserved
+              &copy; Copyright <span className="text-success">Baddel</span>. All Rights Reserved
               <br />
               Design By <b>Iferoo</b>
             </p>
@@ -119,3 +94,6 @@ export default function Footer({ mode }) {
     </div>
   );
 }
+Footer.propTypes = {
+  mode: PropTypes.bool
+};

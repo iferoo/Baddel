@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import img1 from '../assets/partners/gouna.png';
 import img2 from '../assets/partners/cib.png';
 import img3 from '../assets/partners/orascom.png';
@@ -8,8 +10,7 @@ export default function OurPartners({ mode }) {
   return (
     <section
       className={`p-5 text-center ${mode ? 'bg-light' : 'bg-dark'}`}
-      style={{ backgroundImage: '../assets/bike1.jpeg' }}
-    >
+      style={{ backgroundImage: '../assets/bike1.jpeg' }}>
       <h1 className="text-success py-5">Our Partners</h1>
       <div className="container" data-aos="fade-up">
         <div className="row gy-4 align-items-center features-item">
@@ -30,3 +31,6 @@ export default function OurPartners({ mode }) {
     </section>
   );
 }
+OurPartners.propTypes = {
+  mode: PropTypes.bool
+};

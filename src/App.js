@@ -15,6 +15,11 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 function App() {
   const [yOffset, setYOffset] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
+  ///
+  const sections = document.querySelectorAll('section');
+  const [activeLink, setActiveLink] = useState('header');
+
+  ///
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -27,8 +32,26 @@ function App() {
 
     setYOffset(currentYOffset);
     setVisible(newVisible);
+
+    let current = '';
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      // const sectionHeight = section.clientHeight;
+
+      if (currentYOffset > sectionTop - 270) {
+        current = section.getAttribute('id');
+      }
+    });
+    if (currentYOffset < 209) {
+      setActiveLink('header');
+    }
+
+    current ? setActiveLink(current) : setActiveLink('');
   }, [yOffset]);
 
+  console.log(activeLink);
+
+  console.log(window.pageYOffset);
   const [mode, setMode] = useState(true);
 
   const currMode = localStorage.getItem('mode') === 'false' ? false : true;
@@ -57,13 +80,13 @@ function App() {
       easing: 'ease', // default easing for AOS animations
       once: true, // whether animation should happen only once - while scrolling down
       mirror: false, // whether elements should animate out while scrolling past them
-      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+      anchorPlacement: 'top-bottom' // defines which position of the element regarding to window should trigger the animation
     });
   }, []);
 
   return (
     <div className="App">
-      <Navbar mode={currMode} modeHandle={modeHandle} visible={visible} />
+      <Navbar activeLink={activeLink} mode={currMode} modeHandle={modeHandle} visible={visible} />
       <Header mode={currMode} />
       <HowItWork mode={currMode} />
       <Features mode={currMode} />
