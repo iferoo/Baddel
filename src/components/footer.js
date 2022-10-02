@@ -10,7 +10,7 @@ export default function Footer({ mode }) {
         <footer className="py-5">
           <div className="row">
             <div className="col-lg-4 col-md-5  mb-3">
-              <a href="index.html" className="logo d-flex align-items-center">
+              <a href="#header" className="logo d-flex align-items-center">
                 <img src={logo} alt="Baddel" width="150" height="50" />
               </a>
               <p className={`${mode ? 'text-muted' : ''} fs-5`}>
@@ -22,60 +22,74 @@ export default function Footer({ mode }) {
               <h5>Useful Links</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
-                  <a href="/#" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
+                  <a
+                    href="#header"
+                    className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
                     Home
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="/#" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
+                  <a href="#work" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
+                    How it Work
+                  </a>
+                </li>
+                <li className="nav-item mb-2">
+                  <a
+                    href="#features"
+                    className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
                     Features
                   </a>
                 </li>
                 <li className="nav-item mb-2">
-                  <a href="/#" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
-                    Pricing
+                  <a
+                    href="#contact"
+                    className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
+                    contact
                   </a>
                 </li>
-                <li className="nav-item mb-2">
+                {/* <li className="nav-item mb-2">
                   <a href="/#" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
                     FAQs
                   </a>
-                </li>
-                <li className="nav-item mb-2">
-                  <a href="/#" className={`nav-link p-0 ${mode ? 'text-muted' : 'text-light'}`}>
-                    About
-                  </a>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className="col-lg-3 col-md-2 mb-3 ">
               <h5>Contact Us</h5>
               <p className={`fs-6 ${mode ? 'text-muted' : 'text-light'}`}>
-                A108 Adam Street <br />
-                New York, NY 535022
+                3b, street 199, Degla,
+                <br /> Maadi, Cairo 11431, EG
                 <br />
-                United States <br />
                 <br />
-                <strong className="text-success">Phone: </strong> +1 5589 55488 55
+                <strong className="text-success">Phone: </strong> +201000810010
                 <br />
                 <strong className="text-success">Email: </strong>
-                info@example.com
+                info@baddelonline.com
                 <br />
               </p>
             </div>
             <div className="col-lg-2 col-md-2 mb-3">
               <h5>Our Social Media</h5>
               <div className="social-links d-flex  gap-2 fs-3 text-sucsess">
-                <a href="/#" className="twitter">
-                  <i className="bi bi-twitter text-success"></i>
-                </a>
-                <a href="/#" className="facebook">
+                <a
+                  href="https://www.facebook.com/Baddelonline/"
+                  className="facebook"
+                  target="_blank"
+                  rel="noreferrer">
                   <i className="bi bi-facebook text-success"></i>
                 </a>
-                <a href="/#" className="instagram">
+                <a
+                  href="https://www.instagram.com/baddelonline/"
+                  className="instagram"
+                  target="_blank"
+                  rel="noreferrer">
                   <i className="bi bi-instagram text-success"></i>
                 </a>
-                <a href="/#" className="linkedin">
+                <a
+                  href="https://www.linkedin.com/company/18220062/"
+                  className="linkedin"
+                  target="_blank"
+                  rel="noreferrer">
                   <i className="bi bi-linkedin text-success"></i>
                 </a>
               </div>
@@ -86,7 +100,14 @@ export default function Footer({ mode }) {
             <p>
               &copy; Copyright <span className="text-success">Baddel</span>. All Rights Reserved
               <br />
-              Design By <b>Iferoo</b>
+              Design By
+              <a
+                href="https://www.linkedin.com/in/iferoo/"
+                className="link-danger"
+                target="_blank"
+                rel="noreferrer">
+                <b> Iferoo</b>
+              </a>
             </p>
           </div>
         </footer>

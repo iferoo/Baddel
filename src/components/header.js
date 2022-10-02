@@ -17,8 +17,20 @@ export default function Header({ mode }) {
                 The First Bike sharing system in mena.
               </p>
               <div className="row">
-                <img className=" w-50" src={playStore} alt="Play Store" />
-                <img className=" w-50" src={appStore} alt="App Store" />
+                <a
+                  className="w-50"
+                  href="https://play.google.com/store/apps/details?id=com.baddel.baddel&hl=en"
+                  target="_blank"
+                  rel="noreferrer">
+                  <img className="w-100" src={playStore} alt="Play Store" />
+                </a>
+                <a
+                  className=" w-50"
+                  href="https://itunes.apple.com/us/app/baddel/id1229055047?mt=8&ign-mpt=uo%3D4"
+                  target="_blank"
+                  rel="noreferrer">
+                  <img className=" w-100" src={appStore} alt="App Store" />
+                </a>
               </div>
             </div>
           </div>

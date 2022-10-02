@@ -11,9 +11,8 @@ export default function Contact({ mode }) {
             title="Baddel Company Location"
             className="w-100"
             height="300"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"></iframe>
+            src="https://maps.google.com/maps?q=3b%20Street%20199,%20Maadi%20as%20Sarayat%20Al%20Gharbeyah,%20Maadi,%20Cairo%20Governorate%2011431&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
         </div>
-
         <div className="row gy-4 mt-4">
           <div className="col-lg-4 d-flex flex-column gap-2 text-start">
             <div className="info-item d-flex gap-2">
@@ -23,7 +22,8 @@ export default function Contact({ mode }) {
               <div>
                 <h4 className={`${mode ? '' : 'text-light'}`}>Location:</h4>
                 <p className={`${mode ? 'text-muted' : 'text-light'}`}>
-                  A108 Adam Street, New York, NY 535022
+                  3b, street 199, Degla,
+                  <br /> Maadi, Cairo 11431, EG
                 </p>
               </div>
             </div>
@@ -34,7 +34,7 @@ export default function Contact({ mode }) {
               </div>
               <div>
                 <h4 className={`${mode ? '' : 'text-light'}`}>Email:</h4>
-                <p className={`${mode ? 'text-muted' : 'text-light'}`}>info@example.com</p>
+                <p className={`${mode ? 'text-muted' : 'text-light'}`}>info@baddelonline.com</p>
               </div>
             </div>
 
@@ -44,7 +44,7 @@ export default function Contact({ mode }) {
               </div>
               <div>
                 <h4 className={`${mode ? '' : 'text-light'}`}>Call:</h4>
-                <p className={`${mode ? 'text-muted' : 'text-light'}`}>+1 5589 55488 55</p>
+                <p className={`${mode ? 'text-muted' : 'text-light'}`}>+201000810010</p>
               </div>
             </div>
           </div>

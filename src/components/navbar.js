@@ -12,7 +12,7 @@ export default function Navbar({ activeLink, mode, modeHandle, visible }) {
         mode ? 'bg-light' : 'bg-dark'
       }`}>
       <div className="container">
-        <a className="navbar-brand" href="/#">
+        <a className="navbar-brand" href="#header">
           <img src={logo} alt="Baddel" width="150" height="50" />
         </a>
         <button
