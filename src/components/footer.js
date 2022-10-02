@@ -21,7 +21,7 @@ export default function Footer({ mode }) {
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
                   <a
-                    href="#"
+                    href="/#"
                     className={`nav-link p-0 ${
                       mode ? 'text-muted' : 'text-light'
                     }`}
@@ -31,7 +31,7 @@ export default function Footer({ mode }) {
                 </li>
                 <li className="nav-item mb-2">
                   <a
-                    href="#"
+                    href="/#"
                     className={`nav-link p-0 ${
                       mode ? 'text-muted' : 'text-light'
                     }`}
@@ -41,7 +41,7 @@ export default function Footer({ mode }) {
                 </li>
                 <li className="nav-item mb-2">
                   <a
-                    href="#"
+                    href="/#"
                     className={`nav-link p-0 ${
                       mode ? 'text-muted' : 'text-light'
                     }`}
@@ -51,7 +51,7 @@ export default function Footer({ mode }) {
                 </li>
                 <li className="nav-item mb-2">
                   <a
-                    href="#"
+                    href="/#"
                     className={`nav-link p-0 ${
                       mode ? 'text-muted' : 'text-light'
                     }`}
@@ -61,7 +61,7 @@ export default function Footer({ mode }) {
                 </li>
                 <li className="nav-item mb-2">
                   <a
-                    href="#"
+                    href="/#"
                     className={`nav-link p-0 ${
                       mode ? 'text-muted' : 'text-light'
                     }`}
@@ -90,16 +90,16 @@ export default function Footer({ mode }) {
             <div className="col-lg-2 col-md-2 mb-3">
               <h5>Our Social Media</h5>
               <div className="social-links d-flex  gap-2 fs-3 text-sucsess">
-                <a href="#" className="twitter">
+                <a href="/#" className="twitter">
                   <i className="bi bi-twitter text-success"></i>
                 </a>
-                <a href="#" className="facebook">
+                <a href="/#" className="facebook">
                   <i className="bi bi-facebook text-success"></i>
                 </a>
-                <a href="#" className="instagram">
+                <a href="/#" className="instagram">
                   <i className="bi bi-instagram text-success"></i>
                 </a>
-                <a href="#" className="linkedin">
+                <a href="/#" className="linkedin">
                   <i className="bi bi-linkedin text-success"></i>
                 </a>
               </div>

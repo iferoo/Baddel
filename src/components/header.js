@@ -17,15 +17,15 @@ export default function Header({ mode }) {
                 The First Bike sharing system in mena.
               </p>
               <div className="row">
-                <img className=" w-50" src={playStore} />
-                <img className=" w-50" src={appStore} />
+                <img className=" w-50" src={playStore} alt="Play Store" />
+                <img className=" w-50" src={appStore} alt="App Store" />
               </div>
             </div>
           </div>
 
           <div data-aos="fade-up" className="col-md-5 d-flex">
             <div class="thumbnail">
-              <img className="rounded img-fluid" src={bike1} />
+              <img className="rounded img-fluid" src={bike1} alt="Bike" />
             </div>
           </div>
         </div>

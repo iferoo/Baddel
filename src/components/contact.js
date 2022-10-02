@@ -10,6 +10,7 @@ export default function Contact({ mode }) {
       <div className="container" data-aos="fade-up" data-aos-delay="600">
         <div>
           <iframe
+            title="Baddel Company Location"
             className="w-100"
             height="300"
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
@@ -23,7 +24,7 @@ export default function Contact({ mode }) {
                 <i className="bi bi-geo-alt fs-2 text-white align-self-center"></i>
               </div>
               <div>
-                <h4 className={`${mode ? '': 'text-light'}`}>Location:</h4>
+                <h4 className={`${mode ? '' : 'text-light'}`}>Location:</h4>
                 <p className={`${mode ? 'text-muted' : 'text-light'}`}>
                   A108 Adam Street, New York, NY 535022
                 </p>
@@ -35,8 +36,10 @@ export default function Contact({ mode }) {
                 <i className="bi bi-envelope fs-2 text-white align-self-center"></i>
               </div>
               <div>
-                <h4 className={`${mode ? '': 'text-light'}`}>Email:</h4>
-                <p className={`${mode ? 'text-muted' : 'text-light'}`}>info@example.com</p>
+                <h4 className={`${mode ? '' : 'text-light'}`}>Email:</h4>
+                <p className={`${mode ? 'text-muted' : 'text-light'}`}>
+                  info@example.com
+                </p>
               </div>
             </div>
 
@@ -45,19 +48,16 @@ export default function Contact({ mode }) {
                 <i className="bi bi-phone flex-shrink-0 fs-2 text-white align-self-center"></i>
               </div>
               <div>
-                <h4 className={`${mode ? '': 'text-light'}`}>Call:</h4>
-                <p className={`${mode ? 'text-muted' : 'text-light'}`}>+1 5589 55488 55</p>
+                <h4 className={`${mode ? '' : 'text-light'}`}>Call:</h4>
+                <p className={`${mode ? 'text-muted' : 'text-light'}`}>
+                  +1 5589 55488 55
+                </p>
               </div>
             </div>
           </div>
 
           <div className="col-lg-8">
-            <form
-              action="forms/contact.php"
-              method="post"
-              role="form"
-              className="php-email-form"
-            >
+            <form>
               <div className="row">
                 <div className="col-md-6 form-group">
                   <input

@@ -9,6 +9,3 @@ body {
 * {
   transition: background-color cubic-bezier(0.47, 0, 0.745, 0.715) 1s;
 }
-.active {
-  color: #198754 1px solid !important;
-}

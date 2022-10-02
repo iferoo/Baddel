@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './App.css';
 import Contact from './components/contact';
 import Features from './components/features';
@@ -13,6 +13,22 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 
 function App() {
+  const [yOffset, setYOffset] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+
+  const handleScroll = useCallback(() => {
+    const currentYOffset = window.pageYOffset;
+    const newVisible = yOffset > currentYOffset;
+
+    setYOffset(currentYOffset);
+    setVisible(newVisible);
+  }, [yOffset]);
+
   const [mode, setMode] = useState(true);
 
   const currMode = localStorage.getItem('mode') === 'false' ? false : true;
@@ -21,7 +37,7 @@ function App() {
     setMode(!mode);
     localStorage.setItem('mode', mode);
   };
- 
+
   useEffect(() => {
     AOS.init({
       // Global settings:
@@ -47,7 +63,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar mode={currMode} modeHandle={modeHandle} />
+      <Navbar mode={currMode} modeHandle={modeHandle} visible={visible} />
       <Header mode={currMode} />
       <HowItWork mode={currMode} />
       <Features mode={currMode} />

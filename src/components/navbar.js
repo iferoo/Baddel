@@ -2,11 +2,15 @@ import React from 'react';
 import logo from '../assets/baddel-logo.png';
 import './navbar.css';
 
-export default function navbar({ mode, modeHandle }) {
+export default function navbar({ mode, modeHandle, visible }) {
   return (
-    <nav className={`navbar navbar-expand-lg ${mode ? 'bg-light' : 'bg-dark'}`}>
+    <nav
+      className={`navbar ${visible ? 'sticky-top' : ''} navbar-expand-lg ${
+        mode ? 'bg-light' : 'bg-dark'
+      }`}
+    >
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/#">
           <img src={logo} alt="Baddel" width="150" height="50" />
         </a>
         <button
@@ -23,14 +27,14 @@ export default function navbar({ mode, modeHandle }) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active-link" aria-current="page" href="#">
+              <a className="nav-link active-link" aria-current="page" href="/#">
                 Home
               </a>
             </li>
             <li className="nav-item">
               <a
                 className={`nav-link ${mode ? 'text-dark' : 'text-light'}`}
-                href="#howitwork"
+                href="/#"
               >
                 How it Work
               </a>
@@ -38,7 +42,7 @@ export default function navbar({ mode, modeHandle }) {
             <li className="nav-item">
               <a
                 className={`nav-link ${mode ? 'text-dark' : 'text-light'}`}
-                href="#"
+                href="/#"
               >
                 Features
               </a>
@@ -46,7 +50,7 @@ export default function navbar({ mode, modeHandle }) {
             <li className="nav-item">
               <a
                 className={`nav-link ${mode ? 'text-dark' : 'text-light'}`}
-                href="#"
+                href="/#"
               >
                 Contact
               </a>
